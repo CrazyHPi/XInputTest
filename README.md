@@ -7,7 +7,12 @@
 
 Simple Tool to Check the Latency and Update Rate of a Xbox 360 Controller, or Virtual XInput Device (DualShock 3/4)
 
-## Changelog v1.2.0.0 ([Latest Version](https://github.com/chrizonix/XInputTest/releases/tag/v1.2.0.0))
+## Changelog v1.2.1 ([Latest Download](https://github.com/CrazyHPi/XInputTest/releases/tag/v1.2.1)):
+
+- Add Chinese text hint.
+- Now use **Right Stick** for polling rate testing, if you want old left stick test, see [here](https://github.com/chrizonix/XInputTest/releases)
+
+## Changelog v1.2.0.0 ([Download](https://github.com/chrizonix/XInputTest/releases/tag/v1.2.0.0))
 * Added Filter for Latencies below 0.5 ms
 * Added 64-bit Binaries
 
