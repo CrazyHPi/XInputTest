@@ -52,6 +52,9 @@ int main(int argc, char* argv[]) {
     // Check Connection
     if (controller->IsConnected()) {
         cout << "Ready! Waiting for " << MAX_SAMPLES << " Samples (Move Left Stick)" << endl;
+        cout << "准备测试 " << MAX_SAMPLES << " 次右摇杆采样" << endl;
+        cout << "Press Enter to start\n按下回车开始" << endl;
+        cin.get();
     }
 
     // Previous Stick Position
@@ -84,7 +87,7 @@ int main(int argc, char* argv[]) {
             XINPUT_STATE state = controller->GetState();
 
             // Check Left Stick Position
-            if (state.Gamepad.sThumbLX != LX || state.Gamepad.sThumbLY != LY) {
+            if (state.Gamepad.sThumbRX != LX || state.Gamepad.sThumbRY != LY) {
                 // Check Idle
                 if (LX == 0 && LY == 0) {
                     // Don't Count Initial Movement (Out of Center)
@@ -116,8 +119,8 @@ int main(int argc, char* argv[]) {
             }
 
             // Get Left Stick Values
-            LX = state.Gamepad.sThumbLX;
-            LY = state.Gamepad.sThumbLY;
+            LX = state.Gamepad.sThumbRX;
+            LY = state.Gamepad.sThumbRY;
         } else {
             // Controller Not Found
             cout << "Error! Player 1 - XBOX 360 Controller Not Found!\n";
